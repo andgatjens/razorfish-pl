@@ -1,0 +1,21 @@
+//=====================================================================================
+//===== Mixins
+
+@mixin gradient($darkcolor, $lightcolor) {
+  background: $lightcolor; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  $lightcolor 0%, $darkcolor 99%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$lightcolor), color-stop(99%,$darkcolor)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  $lightcolor 0%,$darkcolor 99%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  $lightcolor 0%,$darkcolor 99%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  $lightcolor 0%,$darkcolor 99%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  $lightcolor 0%,$darkcolor 99%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$lightcolor', endColorstr='$darkcolor',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@mixin transition($args...) {
+  -moz-transition: $args;
+  -webkit-transition: $args;
+  -o-transition: $args;
+  -ms-transition: $args;
+  transition: $args;
+}

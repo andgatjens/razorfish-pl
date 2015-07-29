@@ -1,0 +1,6 @@
+{
+  "name": "test-prodigious",
+  "root": "dist",
+  "clean_urls": true,
+  "error_page": "error.html"
+}
